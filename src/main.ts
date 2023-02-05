@@ -1,8 +1,8 @@
 import { ModCallback } from "isaac-typescript-definitions";
-import { CollectibleType, PlayerType } from "isaac-typescript-definitions/dist/src/enums/collections/subTypes";
+import { CollectibleType } from "isaac-typescript-definitions/dist/src/enums/collections/subTypes";
 import { isTainted } from "isaacscript-common/dist/src/functions/players";
 
-const MOD_NAME = "taintedrevives";
+const MOD_NAME = "Tainted Revives";
 
 main();
 
@@ -18,11 +18,11 @@ function main() {
   Isaac.DebugString(`${MOD_NAME} initialized.`);
 }
 
-function taintedRevives(){
+function taintedRevives() {
   const player = Isaac.GetPlayer();
-  if(isTainted(player)){
+  if (isTainted(player)) {
     Isaac.DebugString("You are playing as Tainted character!");
-    if(player.HasCollectible(CollectibleType.LAZARUS_RAGS)){
+    if (player.HasCollectible(CollectibleType.LAZARUS_RAGS)) {
       Isaac.DebugString("Player has Lazarus Rags");
       // Isaac.SetPlayer(PlayerType.LAZARUS_B);
     }
