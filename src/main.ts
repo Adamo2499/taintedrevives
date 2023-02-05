@@ -23,7 +23,8 @@ function taintedRevives(){
   if(isTainted(player)){
     Isaac.DebugString("You are playing as Tainted character!");
     if(player.HasCollectible(CollectibleType.LAZARUS_RAGS)){
-      Isaac.SetPlayer(PlayerType.LAZARUS_B);
+      Isaac.DebugString("Player has Lazarus Rags");
+      // Isaac.SetPlayer(PlayerType.LAZARUS_B);
     }
   }
 }
